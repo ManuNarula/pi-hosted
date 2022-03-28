@@ -21,3 +21,4 @@ Most of the follwing scripts are only needed if you are trying to load one of th
 |[unpoller-install.sh](../tools/unpoller-install.sh)|[Documentation](../docs/UnPoller-Monitor.md)|Preinstall|Preinstall Setup for UnPoller|wget -qO- https://git.io/JMszE \| bash|
 |[update_libseccomp2.sh](../tools/update_libseccomp2.sh)||Update|PI OS 32 libseccomp2 Repair utility|wget -qO- https://git.io/JPXdj \| bash|
 |[update_portainer_agent.sh](../tools/update_portainer_agent.sh)||Update|Upgrade Portainer Agent||
+|[docker_webtop_install.sh](../tools/docker_webtop_install.sh)|Install| wget https://github.com/ManuNarula/pi-hosted/blob/master/install%20scripts/docker_webtop_install.sh |
