@@ -6,6 +6,7 @@ List of all apps included in this project with info related to it.
 
 |App Title|System|Type |Official<br>Doc|PiHosted<br>Doc|Install Script|Extra Scripts|Youtube Video|
 |:--------|:----:|:---:|:-------------:|:-------------:|:------------:|:------------|:-----------:|
+|[Adguardhome-sync](https://adguard.com/en/adguard-home/overview.html)|32/64 bit|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/linuxserver/docker-adguardhome-sync#usage) |  |  |  |  |
 |[Airsonic Advanced](https://github.com/airsonic-advanced/airsonic-advanced)|64 bit|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/linuxserver/docker-airsonic-advanced) |  |  |  |  |
 |[Airsonic](https://airsonic.github.io/)|32/64 bit|Container| [![](../build/images/blue_doc_icon.png)](https://airsonic.github.io/docs/install/docker/) |  |  |  |  |
 |[Archivebox](https://archivebox.io/)|32/64 bit|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/ArchiveBox/ArchiveBox/wiki/Docker) |  |  |  |  |
@@ -153,5 +154,6 @@ List of all apps included in this project with info related to it.
 |[Wireguard Server](https://github.com/WeeJeWel/wg-easy/)|32/64 bit|Stack| [![](../build/images/blue_doc_icon.png)](https://github.com/WeeJeWel/wg-easy/#1-install-docker) | [![](../build/images/red_doc_icon.png)](../docs/wireguard-install.md) |  |  |  |
 |[Wordpress](https://wordpress.com/)|32/64 bit|Stack| [![](../build/images/blue_doc_icon.png)](https://github.com/docker-library/docs/tree/master/wordpress#-via-docker-stack-deploy-or-docker-compose) | [![](../build/images/red_doc_icon.png)](../docs/wordpress_installation.md) |  |  |  |
 |[Yacht](https://yacht.sh/)|32/64 bit|Container| [![](../build/images/blue_doc_icon.png)](https://yacht.sh/docs/Installation/Install#via-docker-compose) |  |  |  |  |
+|[your-spotify](https://github.com/Yooooomi/your_spotify)|32/64 bit|Stack| [![](../build/images/blue_doc_icon.png)](https://github.com/Yooooomi/your_spotify#readme) |  |  |  |  |
 |[YouTubeDL-Material](https://github.com/Tzahi12345/YoutubeDL-Material)|32/64 bit|Container| [![](../build/images/blue_doc_icon.png)](https://github.com/Tzahi12345/YoutubeDL-Material#docker) |  |  |  |  |
 |[ZNC](https://wiki.znc.in/ZNC)|32/64 bit|Container| [![](../build/images/blue_doc_icon.png)](https://docs.linuxserver.io/images/docker-znc) |  |  |  |  |

@@ -3,6 +3,56 @@
 	"templates": [
 		{
 			"categories": [
+				"Other",
+				"Tools"
+			],
+			"env": [
+				{
+					"name": "PUID",
+					"label": "PUID",
+					"default": "1000",
+					"description": "for UserID"
+				},
+				{
+					"name": "PGID",
+					"label": "PGID",
+					"default": "1000",
+					"description": "for GroupID"
+				},
+				{
+					"name": "TZ",
+					"label": "TZ",
+					"default": "America/New_York",
+					"description": "Specify a timezone to use for example America/New_York, Europe/Amsterdam"
+				},
+				{
+					"name": "CONFIGFILE",
+					"label": "CONFIGFILE",
+					"default": "/config/adguardhome-sync.yaml",
+					"description": "Set a custom config file."
+				}
+			],
+			"description": "[Adguardhome-sync](https://github.com/bakito/adguardhome-sync/) is a tool to synchronize AdGuardHome config to replica instances.",
+			"image": "linuxserver/adguardhome-sync:latest",
+			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/adguardhomesync-icon.png",
+			"name": "Adguardhome-sync",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://adguard.com/en/adguard-home/overview.html\" target=\"_blank\">https://adguard.com/en/adguard-home/overview.html</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/linuxserver/docker-adguardhome-sync#usage\" target=\"_blank\">https://github.com/linuxserver/docker-adguardhome-sync#usage</a><br><br><br>Don't forget to create the volume directories on the host file system. mkdir -p /volume1/docker/adguardhome-sync/config",
+			"platform": "linux",
+			"ports": [
+				"8080:8080/tcp"
+			],
+			"restart_policy": "unless-stopped",
+			"title": "Adguardhome-sync",
+			"type": 1,
+			"volumes": [
+				{
+					"bind": "/portainer/Files/AppData/Config/adguardhome-sync/config",
+					"container": "/config"
+				}
+			]
+		},
+		{
+			"categories": [
 				"Music"
 			],
 			"description": "[DEPRECATED] Airsonic is a free, web-based media streamer, providing ubiqutious access to your music. Use it to share your music with friends, or to listen to your own music while at work. You can stream to multiple players simultaneously, for instance to one player in your kitchen and another in your living room.",
@@ -5680,6 +5730,11 @@
 					"name": "WG_DEFAULT_DNS"
 				},
 				{
+					"default": "10.8.0.x",
+					"label": "WG_DEFAULT_ADDRESS",
+					"name": "WG_DEFAULT_ADDRESS"
+				},
+				{
 					"default": "0.0.0.0/0, ::/0",
 					"label": "WG_ALLOWED_IPS",
 					"name": "WG_ALLOWED_IPS"
@@ -5759,6 +5814,60 @@
 				}
 			],
 			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://yacht.sh/\" target=\"_blank\">https://yacht.sh/</a><br><b>Official Docker Documentation: </b><a href=\"https://yacht.sh/docs/Installation/Install#via-docker-compose\" target=\"_blank\">https://yacht.sh/docs/Installation/Install#via-docker-compose</a><br><br><br>"
+		},
+		{
+			"categories": [
+				"Music"
+			],
+			"description": "Self hosted Spotify tracking dashboard.",
+			"env": [
+				{
+					"default": "3081",
+					"label": "API Port",
+					"name": "__api_port__"
+				},
+				{
+					"default": "3080",
+					"label": "Client Port",
+					"name": "__client_port__"
+				},
+				{
+					"default": "http://192.168.X.Y:3080",
+					"label": "Client Endpoint",
+					"name": "__client_endpoint__",
+					"description": "If you have changed the default client port don't forget to change it here too."
+				},
+				{
+					"default": "http://192.168.X.Y:3081",
+					"label": "API Endpoint",
+					"name": "__api_endpoint__",
+					"description": "If you have changed the default API port don't forget to change it here too."
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"description": "Create a Spotify App and copy the Client ID: https://developer.spotify.com/dashboard/applications",
+					"label": "Spotify Client ID",
+					"name": "__your_spotify_client_id__"
+				},
+				{
+					"description": "Copy the Client Secret: https://developer.spotify.com/dashboard/applications",
+					"label": "Spotify Client Secret",
+					"name": "__your_spotify_secret__"
+				}
+			],
+			"name": "Your Spotify",
+			"note": "<h3>Template created by Pi-Hosted Series</h3><b>Check our Github page: <a href=\"https://github.com/pi-hosted/pi-hosted\" target=\"_blank\">https://github.com/pi-hosted/pi-hosted</a></b><br><br><b>Official Webpage: </b><a href=\"https://github.com/Yooooomi/your_spotify\" target=\"_blank\">https://github.com/Yooooomi/your_spotify</a><br><b>Official Docker Documentation: </b><a href=\"https://github.com/Yooooomi/your_spotify#readme\" target=\"_blank\">https://github.com/Yooooomi/your_spotify#readme</a><br><br><br>Create a Spotify App here: https://developer.spotify.com/dashboard/applications. Don't forget adding Redirect URL: http://192.168.X.Y:3081/oauth/spotify/callback under edit settings of the dashboard.",
+			"platform": "linux",
+			"repository": {
+				"stackfile": "stack/your-spotify.yml",
+				"url": "https://github.com/pi-hosted/pi-hosted"
+			},
+			"title": "your-spotify",
+			"type": 3
 		},
 		{
 			"categories": [
